@@ -11,14 +11,14 @@ Você pode acessar a versão implantada deste projeto [aqui](https://exemplo-app
 
 ## Pré-requisitos
 
-Antes de começar, certifique-se de ter instalado o Node.js e o Git em sua máquina.
+Antes de começar, certifique-se de ter instalado o Git e o Docker em sua máquina.
 
 ## Passo a passo
 
 1. Clone o repositório:
 
    ```bash
-   git clone https://github.com/NikisGabriel/REPOSITORY_NAME
+   git clone https://github.com/GabrielMarquesGithub/REPOSITORY_NAME
    ```
 
 2. Navegue até a pasta da aplicação:
@@ -27,64 +27,55 @@ Antes de começar, certifique-se de ter instalado o Node.js e o Git em sua máqu
    cd REPOSITORY_NAME
    ```
 
-3. Instale as dependências:
+3. Execute o container Docker utilizando os scripts de automação:
 
    ```bash
-   npm install
+   bash ./scripts/docker.sh start
    ```
 
-4. Inicie o servidor de desenvolvimento:
-
-   ```bash
-   npm run dev
-   ```
 
 ## Tecnologias Utilizadas
 
-- JavaScript
-- TypeScript
 - Git
-- Vite
-- React
-- Sass
-- React Router
+- Docker
+- MariaDB
 
 ## API Externa
 
-Este projeto consome a API externa Poké API para dados dos itens paginados. [Poké API ](https://pokeapi.co/)
+Este projeto consome uma API externa para obtenção de dados [API](https://exemplo-api.com)
 
 ## Padrões de Codificação
 
 - **Nomenclatura:**
 
-  - Componentes: Utilizam o padrão PascalCase.
-  - Hooks: Seguem o padrão camelCase com o prefixo "use".
-  - Funções: Seguem o padrão camelCase.
-  - Constantes e variáveis: Seguem o padrão camelCase.
   - Tipos: Seguem o padrão camelCase com o sufixo "Type".
+  - Interfaces: Seguem o padrão PascalCase com o sufixo "I".
 
-- **Estrutura de Arquivos:**
-  - `src`: Contém o código-fonte da aplicação.
-    - `assets`: Inclui recursos estáticos como imagens, fontes e estilos.
-    - `components`: Reúne componentes React reutilizáveis.
-    - `hooks`: Agrupa hooks personalizados do React.
-    - `pages`: Mantém as páginas da aplicação.
-    - `utils`: Mantém funções utilitárias da aplicação.
-    - `types`: Contém tipos definidos em TypeScript.
-    - `App.tsx`: O componente raiz da aplicação React, responsável pelo roteamento com React Router.
-    - `main.tsx`: Ponto de entrada principal da aplicação, responsável por configurar os principais Providers.
-  - `index.html`: A página principal da aplicação.
-  - `vite.config.ts`: Configurações do Vite.
-  - `tsconfig.json`: Configurações do TypeScript.
-  - `documents`: Pasta destinada à documentação do projeto.
-  - `package.json`: Arquivo para gerenciamento de dependências e informações do projeto.
+- **Estrutura Principal de Arquivos:**
+  - `app`: Contém o código-fonte da aplicação.
+  - `configs`: Contém arquivos de configuração do ambiente.
+  - `docs`: Contém arquivos necessários para a documentação do projeto.
+  - `docker`: Contém os principais arquivos para a configuração e execução do Docker, como docker-compose.yml e Dockerfiles genéricos.
+  - `scripts`: Contém scripts bash para automatizar tarefas comuns de desenvolvimento.
+  - `sql`: Contém o essencial para a execução do banco de dados SQL.
+  - `.editorconfig`: Arquivo de configuração do editor de código para manter a consistência entre os desenvolvedores.
+  - `.gitignore`: Arquivo de configuração do Git para ignorar arquivos e pastas específicos.
+  - `LICENSE`: Arquivo de licença do projeto.
+  - `README.md`: Arquivo de documentação do projeto.
 
 ## Possíveis Atualizações
 
 Entre as ideias de atualização para o projeto, estão:
 
-- Correções no estado dentro da página de Personagens no ambiente de produção.
+- Ideia 1
+- Ideia 2
 
 ## Observações
 
-Este projeto é simplista quanto a sua estrutura, mas tem como enfoque além do trabalho com API’s o emprego de abordagens com `useReducer`. No Hero Api a parte de escolha de design e estilização foi um ponto focal no desenvolvimento.
+Este projeto é simplista visa apenas a demonstração de um template para ser empregado como base para outros projetos.
+
+## Descrição	
+
+Este é um template de projeto para ser utilizado como base para a criação de novos projetos. 
+
+By: [Gabriel Marques](https://github.com/GabrielMarquesGithub)
